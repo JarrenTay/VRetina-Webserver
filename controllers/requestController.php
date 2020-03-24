@@ -1,5 +1,5 @@
 <?php
-    class IndexController
+    class RequestController
     {
         private $model;
     
@@ -7,7 +7,7 @@
             $this->model = $model;
         }
     
-        public function clicked() {
+        public function processRequest() {
             $this->model->string = 'Updated Data, thanks to MVC and PHP!';
         }
     }
