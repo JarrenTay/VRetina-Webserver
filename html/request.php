@@ -11,16 +11,7 @@
     $controller = new RequestController($model);
     $view = new RequestView($controller, $model);
 
-    if (isset($_POST['id'])) {
-        if (isset($_POST['clientType']) && !empty($_POST['clientType'])) {
-            $controller->processRequest($_POST['id'], $_POST['clientType']);
-            echo $view->output();
-        } else {
-            echo 'a';
-        }
-    } else {
-        echo'b';
-    }
-
+    $controller->processRequest();
+    echo $view->output();
 
 ?>

@@ -10,8 +10,12 @@
         }
     
         public function output() {
+            if ($this->model->id == -1) {
+                return 'Bad Request (id not specified)';
+            }
+
             if ($this->model->clientType == 'browser') {
-                $requestTemplateName = '/var/www/html/views/requestTemplate.html';
+                $requestTemplateName = '/var/www/templates/requestTemplate.html';
                 $requestTemplateStream = fopen($requestTemplateName, 'r') or die('Unable to open request template');
                 $requestTemplate = fread($requestTemplateStream, filesize($requestTemplateName));
                 
@@ -31,6 +35,8 @@
                 return $output;
             } else if ($this->model->clientType == 'app') {
                 return json_encode($this->model);
+            } else {
+                return 'Bad Request (clientType not specified)';
             }
         }
     }

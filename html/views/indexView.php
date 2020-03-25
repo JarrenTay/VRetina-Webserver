@@ -11,11 +11,11 @@
         }
     
         public function output() {
-            $indexTemplateName = '/var/www/html/views/indexTemplate.html';
+            $indexTemplateName = '/var/www/templates/indexTemplate.html';
             $indexTemplateStream = fopen($indexTemplateName, 'r') or die('Unable to open index template');
             $indexTemplate = fread($indexTemplateStream, filesize($indexTemplateName));
 
-            $indexRowTemplateName = '/var/www/html/views/indexRowTemplate.html';
+            $indexRowTemplateName = '/var/www/templates/indexRowTemplate.html';
             $indexRowTemplateStream = fopen($indexRowTemplateName, 'r') or die('Unable to open index row template');
             $indexRowTemplate = fread($indexRowTemplateStream, filesize($indexRowTemplateName));
 
