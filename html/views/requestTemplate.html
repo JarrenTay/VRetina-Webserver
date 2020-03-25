@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>
+            {{title}}
+        </title>
+        {{head}}
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>
+                    Image Id
+                </th>
+                <th>
+                    Retina Model Name
+                </th>
+                <th>
+                    X Dimension
+                </th>
+                <th>
+                    Y Dimension
+                </th>
+                <th>
+                    Filetype
+                </th>
+                <th>
+                    Official
+                </th>
+                <th>
+                    Date/Time Uploaded
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    {{id}}
+                </td>
+                <td>
+                    {{name}}
+                </td>
+                <td>
+                    {{xSize}}
+                </td>
+                <td>
+                    {{ySize}}
+                </td>
+                <td>
+                    {{filetype}}
+                </td>
+                <td>
+                    {{official}}
+                </td>
+                <td>
+                    {{uploaded}}
+                </td>
+            </tr>
+        </table>
+        <img alt="{{altText}}" src="data:image/{{filetype}}; base64,{{imageData}}" />
+    </body>
+</html>

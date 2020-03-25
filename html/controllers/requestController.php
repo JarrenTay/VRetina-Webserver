@@ -8,11 +8,8 @@
         }
     
         public function processRequest($id, $clientType) {
-            if ($clientType == 'browser') {
-
-            } else if ($clientType == 'app') {
-
-            }
+            $this->model->queryDatabase($id);
+            $this->model->clientType = $clientType;
         }
     }
 ?>
