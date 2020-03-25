@@ -1,12 +1,12 @@
 # VRetina-Webserver
 
+The webserver is currently hosted at http://ec2-13-58-160-235.us-east-2.compute.amazonaws.com/
+
 ## Setup Info
 This Webserver is hosted on an Amazon EC2 Server hosting AMI Linux 2.
 
 I followed this guide: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html
   to set up and install apache, php, and mysql.
-  
-The webserver is currently hosted at http://ec2-13-58-160-235.us-east-2.compute.amazonaws.com/
 
 To ssh into the webserver and for a list of passwords required, email jarrentayusa@gmail.com.
 
