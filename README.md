@@ -1,5 +1,6 @@
 # VRetina-Webserver
 
+## Setup Info
 This Webserver is hosted on an Amazon EC2 Server hosting AMI Linux 2.
 
 I followed this guide: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html
@@ -7,10 +8,9 @@ I followed this guide: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-l
   
 The webserver is currently hosted at http://ec2-13-58-160-235.us-east-2.compute.amazonaws.com/
 
-
 To ssh into the webserver and for a list of passwords required, email jarrentayusa@gmail.com.
 
-
+## Requesting Data
 To request data via app or website, send a POST request to http://ec2-13-58-160-235.us-east-2.compute.amazonaws.com/request.php
   with request headers: {"id": id of retina_model, "clientType": "app" or "browser"}
 
@@ -19,16 +19,12 @@ For id of retina_model, see the table named "retina_models".
 For clientType, "browser" will display the image and metadata in a browser friendly manner, whereas "app" will provide the image
   data and metadata in json format.
 
-
+## Database Structure
 The database structure is currently:
-
 
 Database Name: vretina
 
-
-Table Name: retina_models
-
-select * from retina_models;
+### Table Name: retina_models
 
 | id (int11) | name (varchar100)                                                                  | x_size (int11) | y_size (int11) | filetype (tinyint4) | official (tinyint1) | uploaded (timestamp) |
 |------------|------------------------------------------------------------------------------------|----------------|----------------|---------------------|---------------------|----------------------|
@@ -41,10 +37,7 @@ select * from retina_models;
 | 6          | Color-Retinal-Detachment-California_result.jpg                                     | 2934           | 1792           | 0                   | 1                   | 2020-03-25 03:38:41  |
 | 7          | Color-Severe-NPDR-California.jpg                                                   | 2856           | 2000           | 0                   | 1                   | 2020-03-25 03:39:16  |
 
-Table Name: filetypes
-
-select * from filetypes;
-
+### Table Name: filetypes
 
 | id (tinyint4) | filetype (varchar10) |
 |---------------|----------------------|
