@@ -3,26 +3,32 @@
 The webserver is currently hosted at http://ec2-13-58-160-235.us-east-2.compute.amazonaws.com/
 
 ## Setup Info
-This Webserver is hosted on an Amazon EC2 Server hosting AMI Linux 2.
-
+This Webserver is hosted on an Amazon EC2 Server hosting AMI Linux 2.  
 I followed this guide: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html
-  to set up and install apache, php, and mysql.
-
+to set up and install apache, php, and mysql.  
 To ssh into the webserver and for a list of passwords required, email jarrentayusa@gmail.com.
 
 ## Requesting Data
 To request data via app or website, send a POST request to http://ec2-13-58-160-235.us-east-2.compute.amazonaws.com/request.php
-  with request headers: {"id": id of retina_model, "clientType": "app" or "browser"}
-
-For id of retina_model, see the table named "retina_models".
-
+with request headers: {"id": id of retina_model, "clientType": "app" or "browser"}  
+For id of retina_model, see the table named "retina_models".  
 For clientType, "browser" will display the image and metadata in a browser friendly manner, whereas "app" will provide the image
-  data and metadata in json format.
+data and metadata in json format.
+
+For "app" client types, the response json will include:
+- id (string) : id of image in the database
+- name (string) : name of image when it was uploaded
+- xSize (string) : number of pixels wide the image is
+- ySize (string) : number of pixels high the image is
+- filetype (string) : the file extension of the image
+- official (string) : "1" or "0" where 1 designates that the image was uploaded by an official source.
+- uploaded (string) : Date/time in "YYYY-MM-DD HH:MM:SS", where hours is in 24 hour time.
+- image (string) : A base64 encoded version of the image.
 
 ## Database Structure
-The database structure is currently:
+The database structure is currently:  
 
-Database Name: vretina
+### Database Name: vretina
 
 ### Table Name: retina_models
 
