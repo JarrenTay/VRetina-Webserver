@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+project( DisplayImage )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} include)
+add_library(SpherePoint spherePoint.cpp spherePoint.h)
+add_library(Transform transform.cpp transform.h) 
+add_executable( DisplayImage DisplayImage.cpp)
+target_link_libraries( DisplayImage ${OpenCV_LIBS} SpherePoint Transform)

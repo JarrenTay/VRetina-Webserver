@@ -1,0 +1,10 @@
+{
+    "id": "{{id}}",
+    "name": "{{name}}",
+    "xSize": "{{xSize}}",
+    "ySize": "{{ySize}}",
+    "filetype": "{{filetype}}",
+    "official": "{{official}}",
+    "uploaded": "{{uploaded}}",
+    "image": "{{imageData}}"
+}
