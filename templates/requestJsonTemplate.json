@@ -6,5 +6,6 @@
     "filetype": "{{filetype}}",
     "official": "{{official}}",
     "uploaded": "{{uploaded}}",
-    "image": "{{imageData}}"
+    "image": "{{imageData}}",
+    "labels": [{{labels}}]
 }
