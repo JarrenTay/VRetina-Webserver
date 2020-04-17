@@ -72,6 +72,9 @@
         }
  
         public function output() {
+            if ($this->model->requestType == 'numImages') {
+                return $this->model->idList;
+            }
             if ($this->model->id == -1) {
                 return 'Bad Request (id not specified)';
             }

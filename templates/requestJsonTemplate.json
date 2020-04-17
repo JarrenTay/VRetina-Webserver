@@ -1,10 +1,10 @@
 {
-    "id": "{{id}}",
+    "id": {{id}},
     "name": "{{name}}",
-    "xSize": "{{xSize}}",
-    "ySize": "{{ySize}}",
+    "xSize": {{xSize}},
+    "ySize": {{ySize}},
     "filetype": "{{filetype}}",
-    "official": "{{official}}",
+    "official": {{official}},
     "uploaded": "{{uploaded}}",
     "image": "{{imageData}}",
     "labels": [{{labels}}]

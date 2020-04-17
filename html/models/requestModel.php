@@ -17,6 +17,34 @@
             $this->labels = array();
         }
 
+        public function getCount() {
+            $servername = 'localhost';
+            $username = 'ec2-user';
+            $password = 'ukyCS499!';
+            $dbname = 'vretina';
+            $this->imageLocation = '3';
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+            $sql = 'SELECT id FROM retina_models;';
+            $result = $conn->query($sql);
+
+            $idsString = "";
+
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    $idsString = $idsString . $row['id'] . ',';
+                }
+                $idsString = substr($idsString, 0, -1);
+            }               
+            $conn->close();
+            return $idsString;
+        }
+
+
         public function queryDatabase($id) {
             $servername = 'localhost';
             $username = 'ec2-user';
