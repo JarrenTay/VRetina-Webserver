@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>
+            {{title}}
+        </title>
+        <script>
+            function addLabelRow() {
+                var table = document.getElementById("uploadTable");
+                var tableSize = table.rows.length;
+                var row = table.insertRow(tableSize - 1);
+                var cell0 = row.insertCell(0);
+                var cell1 = row.insertCell(1);
+                var cell2 = row.insertCell(2);
+                var cell3 = row.insertCell(3);
+                cell0.innerHTML = "Label Image:"
+
+                var inputFile = document.createElement("input");
+                inputFile.type = "file";
+                inputFile.name = "labelImage[]";
+                inputFile.id = "labelImage[]";
+                cell1.append(inputFile);
+
+                cell2.innerHTML = "Label Name: ";
+
+                var inputName = document.createElement("input");
+                inputName.type = "input";
+                inputName.name = "labelImageName[]";
+                cell3.append(inputName);
+            }
+        </script>
+    <head>
+    <body>
+        <div>
+            {{messages}}
+        </div>
+        <h2>
+            Upload Retina Images
+        </h2>
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <table id="uploadTable">
+                <tr>
+                    <td>
+                        Retina Image File: 
+                    </td>
+                    <td>
+                        <input type="file" name="retinaImage" id="retinaImage">
+                    </td>
+                    <td>
+                        Model Name:
+                    </td>
+                    <td>
+                        <input type="input" name="retinaImageName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="addLabelRow()">
+                            Click to add a label image
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </body>
+</html>
