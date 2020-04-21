@@ -30,7 +30,7 @@
 
     echo("Running Test 2. ");
 
-    $expectFn = "testFiles/test2.txt";
+    $expectFn = "/var/www/tests/testFiles/test2.txt";
     $expectFs = fopen($expectFn, "r");
     $expect = fread($expectFs, filesize($expectFn));
     fclose($expectFs);
