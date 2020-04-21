@@ -1,0 +1,5 @@
+{
+    "meshId": {{meshId}},
+    "vertices": [{{vertices}}],
+    "triangles": [{{triangles}}]
+}

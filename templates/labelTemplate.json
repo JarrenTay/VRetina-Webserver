@@ -1,0 +1,5 @@
+{
+    "labelId": {{labelId}},
+    "labelName": "{{labelName}}",
+    "meshes": [{{meshes}}]
+}
