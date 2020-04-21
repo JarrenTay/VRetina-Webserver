@@ -22,6 +22,6 @@ SpherePoint Transform::toSpherical(int xCoordinate, int yCoordinate) {
     // 3D distance formula: distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2) + pow(z2 - z1, 2))
     // To calculate for Z, where distance = 1 and one coordinate is (0,0,0)
     // z = 
-    double sphereZ = sqrt(1.0 - pow(sphereX, 2) - pow(sphereY, 2));
+    double sphereZ = sqrt(1.0 - pow(sphereX, 2) - pow(sphereY, 2)) * -1;
     return SpherePoint(sphereX, sphereY, sphereZ);
 }
