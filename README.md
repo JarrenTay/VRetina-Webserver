@@ -1,3 +1,7 @@
+# This Read Me is Outdated.
+
+Please visit https://docs.google.com/document/d/1nRBFuHtAMLoOpOO5T_-NK-oQb--zfTHxyhF9qBI4Auw/edit?usp=sharing for an updated user's manual
+
 # VRetina-Webserver
 
 The webserver is currently hosted at http://ec2-13-58-160-235.us-east-2.compute.amazonaws.com/
